@@ -51,9 +51,7 @@ export default function Completed( props: { message: any; }) {
                                 <h3 className="text-gray-600 text-md">Description: {data.desc}</h3>
                                 <h3 className="text-gray-600 text-md">Priority: {data.priority}</h3>
                                 <h3 className="text-gray-600 text-md">Status: {data.status}</h3>
-                                <div className="flex mt-4 md:mt-6">
-                    <button onClick={()=>handelete(data.id)}  className="text-center inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button>
-                </div>        
+                                
                         </div>
                     ) : null
                 )}
