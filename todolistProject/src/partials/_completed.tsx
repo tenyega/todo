@@ -1,14 +1,7 @@
 import { Key, useEffect, useState } from "react";
-import {  useNavigate } from 'react-router-dom';
 export default function Completed( props: { message: any; }) {
 
     const { message } = props;
-    let navigate = useNavigate() 
-    function handelete(id:any){
-    
-        navigate('edit/' + id)
-  
-       }
     const [resToDo, setResToDo] = useState([]);
     useEffect(() => {
        //Runs only on the first render
