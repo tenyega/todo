@@ -16,7 +16,7 @@ interface ResToDo {
 
 export default function Edit() {
     let params = useParams() ;
-
+    // const [msg, setMsg] = useState('');
     
     const [resToDo, setResToDo] = useState<ResToDo |any>({});
         useEffect(() => {
@@ -56,7 +56,7 @@ export default function Edit() {
             const datas = await response.json(); 
             if (datas) {
                 setResToDo(datas);
-                
+                // setMsg('DELETED SUCCESSFULLY')
 
             }
         } catch (err) {
@@ -77,7 +77,8 @@ export default function Edit() {
         const datas = await response.json(); 
         if (datas) {
             setResToDo(datas);
-            
+            // setMsg('EDITED SUCCESSFULLY')
+
 
         }
     } catch (err) {
@@ -91,7 +92,8 @@ export default function Edit() {
     <>
         <NavBar />
        
-            <Menu />
+           <Menu />
+        
             <div className="p-4 sm:ml-64">
     <div className="w-full max-w-5xl p-4 bg-white sm:p-6 rounded-lg shadow-lg">
 

@@ -10,6 +10,7 @@ import Edit from './pages/Edit';
 import Add from './pages/Add';
 import Important from './pages/Important';
 import Tasks from './pages/Tasks';
+import Contact from './pages/Contact';
 //Creation of router
 const router = createBrowserRouter([
   {
@@ -31,6 +32,10 @@ const router = createBrowserRouter([
     path: "/tasks",
     element: <Tasks />
   },
+  {
+    path: "/contact",
+    element: <Contact />
+  }
 
 ]);
 
