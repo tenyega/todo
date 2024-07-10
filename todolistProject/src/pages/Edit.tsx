@@ -143,8 +143,8 @@ export default function Edit() {
                         value={resToDo.status}
                         onChange={(e) => setResToDo({ ...resToDo, status: e.target.value })}
                     >
-                        <option value="pending">Pending</option>
-                        <option value="end">End</option>
+                        <option value="pending">pending</option>
+                        <option value="end">completed</option>
                     </select>
                 </div>
                 <button type="submit" className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Mettre à jour la modification</button>

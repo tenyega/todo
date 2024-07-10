@@ -1,52 +1,36 @@
 {
   "todo": [
     {
-      "id": "7d32",
-      "title": "task12345",
-      "date": "2024-07-12",
-      "desc": "task a faire ",
-      "priority": "low",
-      "status": "pending"
-    },
-    {
-      "id": "79c7",
-      "title": "hello",
-      "date": "2024-07-09",
-      "desc": "hello task for tomooo",
-      "priority": "high",
-      "status": "pending"
-    },
-    {
-      "id": "5589",
-      "title": "hi",
-      "date": "2024-07-12",
-      "desc": "sdfsdfds",
-      "priority": "high",
-      "status": "pending"
-    },
-    {
-      "id": "9945",
-      "title": "new one 13333",
-      "date": "2024-07-05",
-      "desc": "dfsdfs",
-      "priority": "low",
-      "status": "pending"
-    },
-    {
-      "id": "0cdd",
-      "title": "hhhhh",
-      "date": "2024-07-13",
-      "desc": "sdfsdfdsf",
-      "priority": "low",
-      "status": "completed"
-    },
-    {
       "id": "1ed",
       "title": "menage",
       "date": "2024-08-21",
-      "desc": "menage a faire ",
+      "desc": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
       "priority": "medium",
       "status": "completed"
+    },
+    {
+      "id": "c0ae",
+      "title": "repassage",
+      "date": "2024-07-21",
+      "desc": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+      "priority": "medium",
+      "status": ""
+    },
+    {
+      "id": "4dca",
+      "title": "painture",
+      "date": "2024-07-11",
+      "desc": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+      "priority": "high",
+      "status": ""
+    },
+    {
+      "id": "da78",
+      "title": "coloration",
+      "date": "2024-07-20",
+      "desc": "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.",
+      "priority": "high",
+      "status": ""
     }
   ]
 }
