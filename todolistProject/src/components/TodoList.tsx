@@ -137,6 +137,9 @@ datas: Data[];
                 <p className="mb-3 text-left font-normal text-gray-700 dark:text-gray-400"> {data.desc}</p>
                 <div className="flex mt-4 md:mt-6">
                     <button onClick={()=>handelete(data.id)}  className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Edit</button>
+                    </div>
+                    <div className="flex mt-4 md:mt-6">
+                    <button onClick={()=>submit}  className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Delete</button>
                 </div>
             </div>
         </li>

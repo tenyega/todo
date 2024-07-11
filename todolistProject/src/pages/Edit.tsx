@@ -44,25 +44,25 @@ export default function Edit() {
   
 
 
-    const submit = async (e:any) => {
-        e.preventDefault();        try {
-            const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo'+params.id,{
-                method: 'DELETE',
-                body: JSON.stringify(resToDo),
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            });
-            const datas = await response.json(); 
-            if (datas) {
-                setResToDo(datas);
-                // setMsg('DELETED SUCCESSFULLY')
+    // const submit = async (e:any) => {
+    //     e.preventDefault();        try {
+    //         const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo'+params.id,{
+    //             method: 'DELETE',
+    //             body: JSON.stringify(resToDo),
+    //             headers: {
+    //                 'Content-Type': 'application/json'
+    //             }
+    //         });
+    //         const datas = await response.json(); 
+    //         if (datas) {
+    //             setResToDo(datas);
+    //             // setMsg('DELETED SUCCESSFULLY')
 
-            }
-        } catch (err) {
-            setResToDo([]);
-        }
-    }
+    //         }
+    //     } catch (err) {
+    //         setResToDo([]);
+    //     }
+    // }
 
     const misejaour = async () => {
       
@@ -147,6 +147,7 @@ export default function Edit() {
                     </select>
                 </div>
                 <button type="submit" className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Mettre à jour la modification</button>
+                
             </form>
         </div>
     </div>
