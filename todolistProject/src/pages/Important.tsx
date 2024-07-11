@@ -77,8 +77,8 @@ export default function Important() {
                 {resToDo.map((data: { priority: string; id: Key ; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; desc: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; status: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) =>
                   data.priority === 'high' ? (
                     <li key={data.id}>
-        <div className=" w-full max-w-4xl p-6 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-100 dark:hover:bg-gray-200 dark:text-black">
-                <div className="bg-red-200 flex justify-between items-center">
+        <div className="bg-red-200 w-full max-w-4xl p-6 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-100 dark:hover:bg-gray-200 dark:text-black">
+                <div className=" flex justify-between items-center">
                     <div>
                         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-black">{data.title}</h5>
                         <blockquote className="text-xl italic font-semibold text-gray-900 dark:text-white">
