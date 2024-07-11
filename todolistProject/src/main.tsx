@@ -11,6 +11,7 @@ import Add from './pages/Add';
 import Important from './pages/Important';
 import Tasks from './pages/Tasks';
 import Contact from './pages/Contact';
+import Completed from './pages/Completed';
 //Creation of router
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/contact",
     element: <Contact />
+  },
+  {
+    path: "/completed",
+    element: <Completed />
   }
 
 ]);

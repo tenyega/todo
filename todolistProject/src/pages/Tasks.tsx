@@ -1,5 +1,5 @@
 import { SetStateAction, useState } from "react";
-import Completed from "../partials/_completed";
+import Completed from "../../partials/_completed";
 import ToDoList from "../components/TodoList";
 import NavBar from "../components/NavBar";
 import Menu from "../components/menu";
