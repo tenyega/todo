@@ -25,7 +25,7 @@ export default function Edit() {
           
         async function fetchData() {
             try {
-                const response = await fetch('http://localhost:3000/todo/'+params.id);
+                const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo/'+params.id);
                 const datas = await response.json(); 
                 if (datas) {
                     setResToDo(datas);
@@ -53,7 +53,7 @@ export default function Edit() {
 
 
         try {
-        const response = await fetch('http://localhost:3000/todo/'+params.id,{
+        const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo/'+params.id,{
                 method: 'PUT',
                 body: JSON.stringify(resToDo)
             

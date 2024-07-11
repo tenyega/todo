@@ -22,7 +22,7 @@ export default function Important() {
         //Runs only on the first render
         async function fetchData() {
             try {
-                const response = await fetch('http://localhost:3000/todo');
+                const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo');
                 const datas = await response.json(); 
                 if (datas) {
                     setResToDo(datas);
@@ -45,7 +45,7 @@ export default function Important() {
 
      const supprime = async (id:any) => {
       try {
-      const response = await fetch('http://localhost:3000/todo/'+id,{
+      const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo/'+id,{
           method: 'DELETE',
           body: JSON.stringify(resToDo),
           headers: {
