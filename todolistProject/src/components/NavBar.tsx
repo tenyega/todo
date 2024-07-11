@@ -2,9 +2,8 @@ import { NavLink } from "react-router-dom";
 
 
 
-export default function NavBar(props:any) {
+export default function NavBar() {
 
-    console.log(props.compt)
 
    
     return (

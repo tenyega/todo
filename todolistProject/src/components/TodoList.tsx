@@ -60,10 +60,13 @@ datas: Data[];
      }
      useEffect(() => {
         if (datas) {
-            console.log('SearchtedString is ' +searchTxt)
-            const filtered = datas.filter((item: { title: string; }) => item.title.toLowerCase().includes(searchTxt));
+            console.log('SearchtedString is ' + searchTxt)
+            if (searchTxt) {
+                   const filtered = datas.filter((item: { title: string; }) => item.title.toLowerCase().includes(searchTxt));
             setResToDo(filtered);
             console.log(resToDo)
+            }
+         
         }
     }, [datas]);
 
@@ -129,7 +132,7 @@ datas: Data[];
 
                   <ul className="my-4 space-y-3 flex flex-col">
     {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc:string, priority:number,status:string}) => (
-        data.title!='' &&
+        data.title!='' && !searchTxt &&
 
         <li   key={data.id}>
             <div className="w-full max-w-4xl p-6 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-100 dark:hover:bg-gray-200 dark:text-black">
