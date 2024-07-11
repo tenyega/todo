@@ -105,7 +105,6 @@ export default function Edit() {
                     <p><strong>Title:</strong> {resToDo.title}</p>
                     <p><strong>Description:</strong> {resToDo.desc}</p>
                     <p><strong>Status:</strong> {resToDo.status}</p>
-                    <button onClick={submit} type="submit" className="mt-4 bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded">Supprimer</button>
                 </div>
             ) : (
                 <p className="text-center text-gray-500">Loading...</p>
