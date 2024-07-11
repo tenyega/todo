@@ -13,7 +13,7 @@ export default function Important() {
         //Runs only on the first render
         async function fetchData() {
             try {
-                const response = await fetch('http://localhost:3000/todo');
+                const response = await fetch('https://todo-server-woad-gamma.vercel.app/todo');
                 const datas = await response.json(); 
                 if (datas) {
                     setResToDo(datas);

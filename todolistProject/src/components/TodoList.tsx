@@ -28,7 +28,7 @@ datas: Data[];
         //this code runs only when shouldFetch is true (false by default) which means we have typed something in our search bar        
           async function fetchData() {
               try {
-                  const response = await fetch('http://localhost:3000/todo');
+                  const response = await fetch('https://todo-server-woad-gamma.vercel.app/todo');
                   setDatas(await response.json()) ; 
                   if (datas) {
                       setResToDo(datas);
