@@ -1,6 +1,10 @@
 import  { useState } from 'react';
+import {  useNavigate } from 'react-router-dom';
+
 
 export default function MyForm() {
+  let navigate = useNavigate() 
+
   
   const [msg, setMsg] = useState('');
   const [formData, setFormData] = useState({
@@ -25,7 +29,7 @@ export default function MyForm() {
   const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
 
-    const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo', {
+    const response = await fetch('http://localhost:3000/todo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,6 +45,8 @@ export default function MyForm() {
           desc: '',
           priority: '',
          status:''});
+         navigate('/')
+              
     } else {
       
       console.error('Form data submission failed');
@@ -51,9 +57,9 @@ export default function MyForm() {
     return (
       <>
       <h2 className="mb-9 text-base font-semibold text-gray-900 md:text-5xl dark:text-black">
-        ADD NEW TASK 
+       AJOUTER UNE TÂCHE 
             </h2>
-           <form onSubmit={handleSubmit} className="space-y-4">
+           <form onSubmit={handleSubmit} className="space-y-2">
           <div>
             <label className="block text-sm font-medium text-gray-700" htmlFor="title">Title</label>
             <input
@@ -106,21 +112,29 @@ export default function MyForm() {
               <option value="high">High</option>
            
                   </select>
-                  <div className='w-1/2'>
-                <label className="block text-sm font-medium text-gray-700" htmlFor="date">Status</label>
-                      <input
-                        
-                  type="status"
-                  id="status"
-                  name="status"
-                  value="pending"
-                  className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-                      
-                        disabled
-                />
-          </div>
+                  <label className="block text-sm font-medium text-gray-700" htmlFor="status">Status</label>
+            <select
+              id="status"
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+              className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              required
+            >
+              <option value=""></option>
+              <option value="pending">Pending</option>
+              <option value="completed">Completed</option>
+            
+            </select>
     
-          
+          <br />
+<label className="inline-flex items-center cursor-pointer">
+<input type="checkbox" value="" className="sr-only peer"/> 
+
+  <div className="relative w-11 h-6 bg-gray-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-red-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600"></div>
+  <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-700">Priority </span>
+</label>
+
           </div>
           <button
             type="submit"

@@ -1,15 +1,15 @@
 import { Key, useEffect, useState } from "react";
-export default function Completed( props: { message: any; }) {
+export default function Pending( ) {
 
-    const { message } = props;
     const [resToDo, setResToDo] = useState([]);
+
     useEffect(() => {
        //Runs only on the first render
     
          
        async function fetchData() {
            try {
-               const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo');
+               const response = await fetch('http://localhost:3000/todo');
                const datas = await response.json(); 
                if (datas) {
                    setResToDo(datas);
@@ -25,15 +25,20 @@ export default function Completed( props: { message: any; }) {
          
  
     }, []);
+
+ 
+    
+
     console.log(resToDo)
     return (
         <>
-          <div className="flex  flex-row gap-5 px-5 py-10 ml-38 pl-28">
+            
+          <div className="flex  flex-row gap-5 px-5 py-10 ml-40 pl-28 ">
           
             <div className="flex flex-row  min-h-screen gap-5 px-5 py-20 bg-gray-100 flex-wrap ml-38 pl-28">
     
                 {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc: string, priority: string, status: string })  =>
-                    data.status === message ? (
+                    data.status == 'pending' ? (
                         <div
                         key={data.id}
                         className="w-full max-w-md p-5 text-center bg-white border rounded-lg shadow-md border-neutral-300">

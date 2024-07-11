@@ -9,9 +9,7 @@ import Home from './pages/Home';
 import Edit from './pages/Edit';
 import Add from './pages/Add';
 import Important from './pages/Important';
-import Tasks from './pages/Tasks';
-import Contact from './pages/Contact';
-import Completed from './pages/Completed';
+import Completedx from './pages/Completed';
 //Creation of router
 const router = createBrowserRouter([
   {
@@ -30,17 +28,9 @@ const router = createBrowserRouter([
     element: <Important />
   },
   {
-    path: "/tasks",
-    element: <Tasks />
-  },
-  {
-    path: "/contact",
-    element: <Contact />
-  },
-  {
     path: "/completed",
-    element: <Completed />
-  }
+    element: <Completedx />
+  },
 
 ]);
 

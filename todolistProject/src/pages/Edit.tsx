@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import NavBar from "../components/NavBar"
 import {  useEffect, useState } from 'react';
 import Menu from "../components/menu";
@@ -16,7 +16,7 @@ interface ResToDo {
 
 export default function Edit() {
     let params = useParams() ;
-    // const [msg, setMsg] = useState('');
+
     
     const [resToDo, setResToDo] = useState<ResToDo |any>({});
         useEffect(() => {
@@ -25,7 +25,7 @@ export default function Edit() {
           
         async function fetchData() {
             try {
-                const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo/' + params.id);
+                const response = await fetch('http://localhost:3000/todo/'+params.id);
                 const datas = await response.json(); 
                 if (datas) {
                     setResToDo(datas);
@@ -44,41 +44,27 @@ export default function Edit() {
   
 
 
-    // const submit = async (e:any) => {
-    //     e.preventDefault();        try {
-    //         const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo'+params.id,{
-    //             method: 'DELETE',
-    //             body: JSON.stringify(resToDo),
-    //             headers: {
-    //                 'Content-Type': 'application/json'
-    //             }
-    //         });
-    //         const datas = await response.json(); 
-    //         if (datas) {
-    //             setResToDo(datas);
-    //             // setMsg('DELETED SUCCESSFULLY')
-
-    //         }
-    //     } catch (err) {
-    //         setResToDo([]);
-    //     }
-    // }
+   
+  
 
     const misejaour = async () => {
       
+     
 
 
         try {
-        const response = await fetch('https://json-server-vercel-two-kappa.vercel.app/todo/'+params.id,{
+        const response = await fetch('http://localhost:3000/todo/'+params.id,{
                 method: 'PUT',
                 body: JSON.stringify(resToDo)
+            
 
         });
         const datas = await response.json(); 
         if (datas) {
             setResToDo(datas);
-            // setMsg('EDITED SUCCESSFULLY')
 
+           
+            
 
         }
     } catch (err) {
@@ -92,12 +78,12 @@ export default function Edit() {
     <>
         <NavBar />
        
-           <Menu />
-        
+            <Menu />
             <div className="p-4 sm:ml-64">
     <div className="w-full max-w-5xl p-4 bg-white sm:p-6 rounded-lg shadow-lg">
 
         <div className="flex flex-col items-center">
+
             
             {resToDo ? (
                 <div className="flex flex-col items-start gap-5 px-5 py-10 border border-gray-300 rounded-md shadow-md bg-gray-50 w-full">
@@ -142,12 +128,11 @@ export default function Edit() {
                         value={resToDo.status}
                         onChange={(e) => setResToDo({ ...resToDo, status: e.target.value })}
                     >
-                        <option value="pending">pending</option>
-                        <option value="end">completed</option>
+                        <option value="pending">Pending</option>
+                        <option value="completed">Completed</option>
                     </select>
                 </div>
                 <button type="submit" className="mt-4 bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded">Mettre à jour la modification</button>
-                
             </form>
         </div>
     </div>
