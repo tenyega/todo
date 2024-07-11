@@ -9,7 +9,7 @@ export default function Completed( props: { message: any; }) {
          
        async function fetchData() {
            try {
-               const response = await fetch('https://todo-server-woad-gamma.vercel.app/todo');
+               const response = await fetch('https://github.com/tenyega/todo/blob/master/db.json');
                const datas = await response.json(); 
                if (datas) {
                    setResToDo(datas);

@@ -25,7 +25,7 @@ export default function Edit() {
           
         async function fetchData() {
             try {
-                const response = await fetch("https://todo-server-woad-gamma.vercel.app/todo" +params.id);
+                const response = await fetch("https://github.com/tenyega/todo/blob/master/db.json" +params.id);
                 const datas = await response.json(); 
                 if (datas) {
                     setResToDo(datas);
@@ -46,7 +46,7 @@ export default function Edit() {
 
     const submit = async (e:any) => {
         e.preventDefault();        try {
-            const response = await fetch('https://todo-server-woad-gamma.vercel.app/todo'+params.id,{
+            const response = await fetch('https://github.com/tenyega/todo/blob/master/db.json'+params.id,{
                 method: 'DELETE',
                 body: JSON.stringify(resToDo),
                 headers: {
@@ -69,7 +69,7 @@ export default function Edit() {
 
 
         try {
-        const response = await fetch('https://todo-server-woad-gamma.vercel.app/todo'+params.id,{
+        const response = await fetch('https://github.com/tenyega/todo/blob/master/db.json'+params.id,{
                 method: 'PUT',
                 body: JSON.stringify(resToDo)
 
