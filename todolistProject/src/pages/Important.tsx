@@ -72,7 +72,7 @@ export default function Important() {
               <h2 className="mb-9 text-base font-semibold text-gray-900 md:text-5xl dark:text-black">
                 TÂCHES IMPORTANTES
               </h2>
-              <div className=" bg-red-200 w-full max-w-5xl p-4 bg-white sm:p-6 dark:bg-white-800 dark:border-white-100">
+              <div className="  w-full max-w-5xl p-4 bg-white sm:p-6 dark:bg-white-800 dark:border-white-100">
               <ul className="my-4 space-y-3">
                 {resToDo.map((data: { priority: string; id: Key ; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; desc: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; status: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) =>
                   data.priority === 'high' ? (
