@@ -69,8 +69,8 @@ export default function PartialImportant() {
              
               <ul className="my-4 space-y-3">
     
-            {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc: string, priority: string, status: string })  =>
-                data.priority == 'high' ? (
+            {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc: string, priorityToggle: Boolean, status: string })  =>
+                data.priorityToggle == true ? (
                     <li key={data.id}>
                       <div className=" bg-red-200 w-full max-w-4xl p-6 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-100 hover:bg-gray-200 dark:text-black">
                               <div className="flex justify-between items-center">

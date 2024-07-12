@@ -7,7 +7,7 @@ interface RestToDo{
   title: string;
   date: Date;
   desc: string;
-  priority: string;
+  priorityToggle: Boolean;
   status: string;
 }
 
@@ -74,8 +74,8 @@ export default function Important() {
               </h2>
               <div className="  w-full max-w-5xl p-4 bg-white sm:p-6 dark:bg-white-800 dark:border-white-100">
               <ul className="my-4 space-y-3">
-                {resToDo.map((data: { priority: string; id: Key ; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; desc: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; status: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) =>
-                  data.priority === 'high' ? (
+                {resToDo.map((data: { priorityToggle: Boolean; id: Key ; title: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; desc: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; status: string | number | boolean | ReactElement<any, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | null | undefined; }) =>
+                  data.priorityToggle === true ? (
                     <li key={data.id}>
         <div className="bg-red-200 w-full max-w-4xl p-6 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-100 dark:hover:bg-gray-200 dark:text-black">
                 <div className=" flex justify-between items-center">

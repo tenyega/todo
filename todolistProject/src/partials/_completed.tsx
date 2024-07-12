@@ -70,7 +70,7 @@ export default function PartialCompleted() {
              
               <ul className="my-4 space-y-3">
     
-            {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc: string, priority: string, status: string })  =>
+            {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc: string, priorityToggle: Boolean, status: string })  =>
                 data.status == 'completed' ? (
                     <li key={data.id}>
                       <div className="bg-green-200 w-full max-w-4xl p-6 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-100 hover:bg-gray-200 dark:text-black">

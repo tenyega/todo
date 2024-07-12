@@ -10,7 +10,7 @@ interface ResToDo {
     title: string;
     date: Date;
     desc: string;
-    priority: string;
+    priorityToggle: Boolean;
     status: string;
 }
 

@@ -10,7 +10,7 @@ interface Data {
     title: string;
     date: Date;
     desc: string;
-    priority: string;
+    priorityToggle: Boolean;
     status: string;
 }
 interface Datas {
@@ -207,7 +207,7 @@ interface ToDo {
            {selectedOption== '' &&    
 
     <ul className="my-4 space-y-3">
-    {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc:string, priority:number, status:string }) => (
+    {resToDo.map((data: { id: Key | null | undefined, title: string, date: string, desc:string, priorityToggle:Boolean, status:string }) => (
         data.title !== '' &&
         <li key={data.id}>
             <div className="w-full max-w-4xl p-6 font-bold text-gray-900 rounded-lg bg-gray-50 hover:bg-gray-100 group hover:shadow dark:bg-gray-100 dark:hover:bg-gray-200 dark:text-black">

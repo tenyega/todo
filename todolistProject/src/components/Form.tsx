@@ -11,8 +11,9 @@ export default function MyForm() {
     title: '',
     date: '',
       desc: '',
-      priority: '',
-     status:''
+      // priority: '',
+    status: '',
+     priorityToggle:false
   });
 
   const handleChange = (e: { target: { name: any; value: any; }; }) => {
@@ -21,6 +22,11 @@ export default function MyForm() {
       ...formData,
       [name]: value,
     });
+  };
+
+  const handleToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { checked } = event.target;
+    setFormData({ ...formData, priorityToggle: checked });
   };
 
  
@@ -43,8 +49,9 @@ export default function MyForm() {
       setFormData({   title: '',
         date: '',
           desc: '',
-          priority: '',
-         status:''});
+          // priority: '',
+        status: '',
+        priorityToggle: false});
          navigate('/')
               
     } else {
@@ -97,7 +104,7 @@ export default function MyForm() {
          </div>
           <div className='flex flex-row gap-5'>
         
-            <label className="block text-sm font-medium text-gray-700" htmlFor="priority">Priority</label>
+            {/* <label className="block text-sm font-medium text-gray-700" htmlFor="priority">Priority</label>
             <select
               id="priority"
               name="priority"
@@ -111,7 +118,7 @@ export default function MyForm() {
               <option value="medium">Medium</option>
               <option value="high">High</option>
            
-                  </select>
+                  </select> */}
                   <label className="block text-sm font-medium text-gray-700" htmlFor="status">Status</label>
             <select
               id="status"
@@ -128,8 +135,10 @@ export default function MyForm() {
             </select>
     
           <br />
-<label className="inline-flex items-center cursor-pointer">
-<input type="checkbox" value="" className="sr-only peer"/> 
+<label className="inline-flex items-center cursor-pointer"  htmlFor='priorityToggle'>
+<input type="checkbox" className="sr-only peer" id="priorityToggle"  onChange={handleToggle} 
+              name="priorityToggle"
+              checked={formData.priorityToggle}/>
 
   <div className="relative w-11 h-6 bg-gray-500 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-black-300 dark:peer-focus:ring-red-200 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-red-600"></div>
   <span className="ms-3 text-sm font-medium text-gray-900 dark:text-gray-700">Priority </span>

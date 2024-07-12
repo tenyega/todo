@@ -7,7 +7,7 @@ interface Data {
     title: string;
     date: Date;
     desc: string;
-    priority: string;
+    priorityToggle: Boolean;
     status: string;
 }
 interface Datas {
@@ -19,7 +19,7 @@ export default function NavBar() {
     const [resToDo, setResToDo] = useState([]);
 
 
-    const highPriorityItems = resToDo.filter((data: { priority: string; }) => data.priority === 'high');
+    const highPriorityItems = resToDo.filter((data: { priorityToggle: Boolean; }) => data.priorityToggle == true);
     const taskCompletedItems = resToDo.filter((data: { status: string; }) => data.status === 'completed');
 
     console.log(highPriorityItems);
